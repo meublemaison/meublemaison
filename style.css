@@ -1,130 +1,84 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Base */
+html, body {
+  height: 100%;
 }
-
-/* Full-page fixed background with blur overlay */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: white;
-    background: url('bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
+  font-family: 'Tajawal', sans-serif;
+  direction: rtl;
 }
 
-/* Add blur overlay */
+/* Full-page fixed background with blur */
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(3px);
-    z-index: -1;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: url('background.jpg') center center / cover no-repeat fixed;
+  filter: blur(4px);          /* BLUR strength */
+  transform: scale(1.04);     /* avoid blur edges */
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0,0,0,0.25);  /* subtle dark overlay for readability */
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: rgba(0,0,0,0.8);
-}
-
-header h1 {
-    font-size: 1.8rem;
-    color: white;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-}
-
-/* Hero section */
+/* Hero */
 .hero {
-    text-align: center;
-    padding: 120px 20px 100px;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.hero-card {
+  background: rgba(0,0,0,0.55);
+  padding: 28px 36px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.hero-card h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.hero-card p {
+  font-size: 1.1rem;
 }
 
-.hero-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+/* Product cards (shared styles; Tailwind handles layout) */
+.card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 12px 14px 16px;
+  text-align: center;
+}
+.card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
 }
 
-.hero-text p {
-    font-size: 1.2rem;
-}
-
-/* Products */
-.products {
-    text-align: center;
-    padding: 60px 20px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 12px;
-    margin: 30px auto;
-    max-width: 1200px;
-}
-
-.products h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.product-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product {
-    background: rgba(0,0,0,0.7);
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 300px;
-}
-
-.product img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.product p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: white;
-}
-
-/* Contact */
-.contact {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-/* Floating WhatsApp Button */
-#whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 15px;
-    border: none;
-    border-radius: 50%;
-    background: #25D366;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+/* ensure header text wraps nicely on small screens */
+@media (max-width: 420px) {
+  .hero-card h1 { font-size: 2rem; }
 }
