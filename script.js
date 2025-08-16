@@ -1,13 +1,40 @@
-// Floating WhatsApp button click
-document.getElementById("whatsapp-btn").addEventListener("click", function() {
-    window.open("https://wa.me/213555555555", "_blank");
+// Log when page is ready
+console.log("Meuble Maison showroom loaded successfully!");
+
+// Smooth scroll for internal links (header nav)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 80, // account for fixed header
+        behavior: "smooth"
+      });
+    }
+  });
 });
 
-// Smooth scrolling for navigation
-document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        target.scrollIntoView({ behavior: "smooth" });
-    });
-});
+// Floating WhatsApp button
+const whatsappNumber = "213658038620"; // your phone in international format
+const btn = document.createElement("a");
+btn.href = `https://wa.me/${whatsappNumber}`;
+btn.target = "_blank";
+btn.innerHTML = "💬";
+btn.style.position = "fixed";
+btn.style.bottom = "20px";
+btn.style.right = "20px";
+btn.style.background = "#25D366";
+btn.style.color = "white";
+btn.style.fontSize = "24px";
+btn.style.padding = "12px 16px";
+btn.style.borderRadius = "50%";
+btn.style.boxShadow = "0 4px 12px rgba(0,0,0,0.3)";
+btn.style.zIndex = "999";
+btn.style.textDecoration = "none";
+btn.style.textAlign = "center";
+btn.style.lineHeight = "1";
+btn.style.transition = "transform 0.3s ease";
+btn.addEventListener("mouseenter", () => btn.style.transform = "scale(1.1)");
+btn.addEventListener("mouseleave", () => btn.style.transform = "scale(1.0)");
+document.body.appendChild(btn);
