@@ -1,9 +1,9 @@
-// Log to confirm JS is loaded
-console.log("Meuble Maison showroom loaded!");
+// Log when page is ready
+console.log("Meuble Maison showroom loaded successfully!");
 
-// Smooth scrolling for anchor links
+// Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
     if (target) {
@@ -16,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Floating WhatsApp button
-const whatsappNumber = "213658038620"; // Your phone with country code
+const whatsappNumber = "213658038620"; // your phone
 const btn = document.createElement("a");
 btn.href = `https://wa.me/${whatsappNumber}`;
 btn.target = "_blank";
