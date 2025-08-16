@@ -3,69 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meuble Maison - معرض الأثاث الرخامي</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <title>معرض ميبل ميزون</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
+  <header class="header">
+    <h1>معرض ميبل ميزون</h1>
+    <nav>
+      <a href="#products">منتجاتنا</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+  </header>
+
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>أثاث رخامي فاخر</h1>
-      <p>اكتشف تصاميم خالدة لمنزلك</p>
-      <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
-        استكشف الآن
-      </button>
+    <div class="overlay">
+      <h2>أفضل أثاث لمنزلك</h2>
+      <p>جودة عالية – تصميم عصري – أسعار تنافسية</p>
     </div>
   </section>
 
-  <!-- Products Section -->
+  <!-- Product Gallery -->
   <section id="products" class="products">
     <h2>منتجاتنا</h2>
     <div class="product-grid">
-      <div class="product">
+      <div class="product-card">
         <img src="prod1.jpeg" alt="منتج 1">
-        <h3>طاولة رخامية فاخرة</h3>
+        <p>كرسي فاخر</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod2.jpeg" alt="منتج 2">
-        <h3>رخام أبيض للمطابخ</h3>
+        <p>طاولة خشب</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod3.jpg" alt="منتج 3">
-        <h3>رخام أسود أنيق</h3>
+        <p>أريكة مريحة</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod4.jpeg" alt="منتج 4">
-        <h3>رخام طبيعي للأرضيات</h3>
+        <p>كرسي مكتب</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod5.jpeg" alt="منتج 5">
-        <h3>رخام للمداخل الفاخرة</h3>
+        <p>طاولة قهوة</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod6.jpeg" alt="منتج 6">
-        <h3>رخام كلاسيكي للحمامات</h3>
+        <p>خزانة مودرن</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod7.jpeg" alt="منتج 7">
-        <h3>تصميم رخامي حديث</h3>
+        <p>كرسي خشبي</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod8.jpeg" alt="منتج 8">
-        <h3>رخام رمادي أنيق</h3>
+        <p>سرير فاخر</p>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="prod9.jpeg" alt="منتج 9">
-        <h3>رخام فاخر متعدد الألوان</h3>
+        <p>دولاب ملابس</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Meuble Maison - جميع الحقوق محفوظة</p>
-  </footer>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>اتصل بنا</h2>
+    <p>للطلبات والاستفسارات: <strong>0658038620</strong></p>
+  </section>
 
   <script src="script.js"></script>
 </body>
