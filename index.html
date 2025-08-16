@@ -1,82 +1,72 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeubleMaison - أثاث رخامي فاخر</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meuble Maison - معرض الأثاث الرخامي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>أثاث رخامي فاخر</h1>
+      <p>اكتشف تصاميم خالدة لمنزلك</p>
+      <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+        استكشف الآن
+      </button>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>أثاث رخامي فاخر</h1>
-            <p>اكتشف تصاميم خالدة لمنزلك</p>
-            <button onclick="exploreProducts()">استكشف الآن</button>
-        </div>
-    </section>
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <h2>منتجاتنا</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="prod1.jpeg" alt="منتج 1">
+        <h3>طاولة رخامية فاخرة</h3>
+      </div>
+      <div class="product">
+        <img src="prod2.jpeg" alt="منتج 2">
+        <h3>رخام أبيض للمطابخ</h3>
+      </div>
+      <div class="product">
+        <img src="prod3.jpg" alt="منتج 3">
+        <h3>رخام أسود أنيق</h3>
+      </div>
+      <div class="product">
+        <img src="prod4.jpeg" alt="منتج 4">
+        <h3>رخام طبيعي للأرضيات</h3>
+      </div>
+      <div class="product">
+        <img src="prod5.jpeg" alt="منتج 5">
+        <h3>رخام للمداخل الفاخرة</h3>
+      </div>
+      <div class="product">
+        <img src="prod6.jpeg" alt="منتج 6">
+        <h3>رخام كلاسيكي للحمامات</h3>
+      </div>
+      <div class="product">
+        <img src="prod7.jpeg" alt="منتج 7">
+        <h3>تصميم رخامي حديث</h3>
+      </div>
+      <div class="product">
+        <img src="prod8.jpeg" alt="منتج 8">
+        <h3>رخام رمادي أنيق</h3>
+      </div>
+      <div class="product">
+        <img src="prod9.jpeg" alt="منتج 9">
+        <h3>رخام فاخر متعدد الألوان</h3>
+      </div>
+    </div>
+  </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <h2>منتجاتنا</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="prod1.jpeg" alt="طاولة رخامية">
-                <h3>طاولة رخامية</h3>
-                <p>تصميم أنيق يناسب جميع المساحات</p>
-            </div>
-            <div class="product">
-                <img src="prod2.jpeg" alt="كرسي رخامي">
-                <h3>كرسي رخامي</h3>
-                <p>راحة وأناقة في آن واحد</p>
-            </div>
-            <div class="product">
-                <img src="prod3.jpg" alt="خزانة رخامية">
-                <h3>خزانة رخامية</h3>
-                <p>عملية وفاخرة بتصميم عصري</p>
-            </div>
-            <div class="product">
-                <img src="prod4.jpeg" alt="منضدة جانبية">
-                <h3>منضدة جانبية</h3>
-                <p>إضافة مثالية لغرفة المعيشة</p>
-            </div>
-            <div class="product">
-                <img src="prod5.jpeg" alt="حوض رخامي">
-                <h3>حوض رخامي</h3>
-                <p>لمسة فخامة للمطبخ أو الحمام</p>
-            </div>
-            <div class="product">
-                <img src="prod6.jpeg" alt="رف رخامي">
-                <h3>رف رخامي</h3>
-                <p>جمال وبساطة للتخزين الأنيق</p>
-            </div>
-            <div class="product">
-                <img src="prod7.jpeg" alt="لوح رخامي">
-                <h3>لوح رخامي</h3>
-                <p>متعدد الاستخدامات وفاخر</p>
-            </div>
-            <div class="product">
-                <img src="prod8.jpeg" alt="كرسي طاولة طعام">
-                <h3>كرسي طاولة طعام</h3>
-                <p>راحة مميزة بتصميم راقٍ</p>
-            </div>
-            <div class="product">
-                <img src="prod9.jpeg" alt="إكسسوارات رخامية">
-                <h3>إكسسوارات رخامية</h3>
-                <p>تفاصيل صغيرة بأثر كبير</p>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Meuble Maison - جميع الحقوق محفوظة</p>
+  </footer>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>تواصل معنا</h2>
-        <p>رقم الهاتف: <a href="tel:0658038620">0658038620</a></p>
-    </section>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
