@@ -16,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Floating WhatsApp button
-const whatsappNumber = "213658038620"; // your phone
+const whatsappNumber = "213658038620"; // your phone in intl format
 const btn = document.createElement("a");
 btn.href = `https://wa.me/${whatsappNumber}`;
 btn.target = "_blank";
