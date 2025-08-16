@@ -3,36 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marble Showroom</title>
+  <title>Meuble Maison – Marble Showroom</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-white shadow p-6">
-    <h1 class="text-3xl font-bold text-center">Our Marble Showroom</h1>
-    <p class="text-center text-gray-600 mt-2">Premium quality slabs and finishes</p>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Meuble Maison</h1>
+      <nav class="space-x-6 text-lg">
+        <a href="#showroom" class="hover:text-blue-600">Showroom</a>
+        <a href="mailto:info@yourstore.com" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Gallery -->
-  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <a href="prod1.jpg" data-lightbox="marble" data-title="Product 1 - Carrara White">
-      <img src="prod1.jpg" class="rounded-xl shadow hover:scale-105 transition-transform" alt="Marble 1">
-    </a>
-    <a href="prod2.jpg" data-lightbox="marble" data-title="Product 2 - Calacatta Gold">
-      <img src="prod2.jpg" class="rounded-xl shadow hover:scale-105 transition-transform" alt="Marble 2">
-    </a>
-    <a href="prod3.jpg" data-lightbox="marble" data-title="Product 3 - Nero Marquina">
-      <img src="prod3.jpg" class="rounded-xl shadow hover:scale-105 transition-transform" alt="Marble 3">
-    </a>
+  <!-- HERO SECTION -->
+  <section class="h-screen flex flex-col items-center justify-center text-center text-gray-800 px-6">
+    <h2 class="text-5xl font-extrabold mb-4 drop-shadow">Premium Marble Showroom</h2>
+    <p class="text-xl max-w-2xl mb-6 drop-shadow">Discover timeless beauty with our exclusive collection of marble slabs and finishes.</p>
+    <a href="#showroom" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">Explore Now</a>
+  </section>
+
+  <!-- SHOWROOM GRID -->
+  <main id="showroom" class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
+    
+    <!-- Product Card 1 -->
+    <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
+      <a href="prod1.jpeg" data-lightbox="marble" data-title="Carrara White">
+        <img src="prod1.jpeg" alt="Marble 1" class="w-full">
+      </a>
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold">Carrara White</h3>
+        <p class="text-sm text-gray-600 mb-3">Polished slab – 2cm thickness</p>
+        <a href="https://wa.me/213555000000" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Contact</a>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
+      <a href="prod2.jpeg" data-lightbox="marble" data-title="Calacatta Gold">
+        <img src="prod2.jpeg" alt="Marble 2" class="w-full">
+      </a>
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold">Calacatta Gold</h3>
+        <p class="text-sm text-gray-600 mb-3">Honed slab – 3cm thickness</p>
+        <a href="https://wa.me/213555000000" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Contact</a>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
+      <a href="prod3.jpg" data-lightbox="marble" data-title="Nero Marquina">
+        <img src="prod3.jpg" alt="Marble 3" class="w-full">
+      </a>
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-bold">Nero Marquina</h3>
+        <p class="text-sm text-gray-600 mb-3">Polished slab – 2cm thickness</p>
+        <a href="https://wa.me/213555000000" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Contact</a>
+      </div>
+    </div>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white mt-12 p-6 text-center text-gray-600">
-    © 2025 Your Marble Store – Contact us at <a href="mailto:info@yourstore.com" class="text-blue-600 hover:underline">info@yourstore.com</a>
+  <!-- FOOTER -->
+  <footer class="bg-white/80 backdrop-blur shadow mt-12 p-6 text-center text-gray-700 relative z-10">
+    © 2025 Meuble Maison – All Rights Reserved
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
