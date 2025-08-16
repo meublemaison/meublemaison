@@ -1,40 +1,36 @@
-// Log when page is ready
-console.log("Meuble Maison showroom loaded successfully!");
+// Product data with names/descriptions
+const products = [
+  { img: 'prod1.jpeg', name: 'طاولة رخام فاخرة' },
+  { img: 'prod2.jpeg', name: 'حوض غسيل رخامي' },
+  { img: 'prod3.jpg',  name: 'منضدة قهوة أنيقة' },
+  { img: 'prod4.jpeg', name: 'رخام أبيض كلاسيكي' },
+  { img: 'prod5.jpeg', name: 'تصميم رخامي أسود' },
+  { img: 'prod6.jpeg', name: 'رخام للمطبخ' },
+  { img: 'prod7.jpeg', name: 'رخام أرضيات فاخر' },
+  { img: 'prod8.jpeg', name: 'رخام للجدران' },
+  { img: 'prod9.jpeg', name: 'قطع رخامية متنوعة' }
+];
 
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 80,
-        behavior: "smooth"
-      });
-    }
+// Select the container for products
+const productContainer = document.querySelector('.product-grid');
+
+// Clear any static HTML (if already written)
+productContainer.innerHTML = '';
+
+// Add products dynamically to the grid
+products.forEach(product => {
+  const card = document.createElement('div');
+  card.classList.add('product-card');
+
+  card.innerHTML = `
+    <img src="${product.img}" alt="${product.name}">
+    <h3>${product.name}</h3>
+  `;
+
+  // Optional: Click event to highlight or show popup
+  card.addEventListener('click', () => {
+    alert(`تم اختيار: ${product.name}`);
   });
-});
 
-// Floating WhatsApp button
-const whatsappNumber = "213658038620"; // your phone
-const btn = document.createElement("a");
-btn.href = `https://wa.me/${whatsappNumber}`;
-btn.target = "_blank";
-btn.innerHTML = "💬";
-btn.style.position = "fixed";
-btn.style.bottom = "20px";
-btn.style.right = "20px";
-btn.style.background = "#25D366";
-btn.style.color = "white";
-btn.style.fontSize = "24px";
-btn.style.padding = "12px 16px";
-btn.style.borderRadius = "50%";
-btn.style.boxShadow = "0 4px 12px rgba(0,0,0,0.3)";
-btn.style.zIndex = "999";
-btn.style.textDecoration = "none";
-btn.style.textAlign = "center";
-btn.style.lineHeight = "1";
-btn.style.transition = "transform 0.3s ease";
-btn.addEventListener("mouseenter", () => btn.style.transform = "scale(1.1)");
-btn.addEventListener("mouseleave", () => btn.style.transform = "scale(1.0)");
-document.body.appendChild(btn);
+  productContainer.appendChild(card);
+});
