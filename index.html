@@ -1,80 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meuble Maison – Marble Showroom</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meuble Maison Showroom</title>
   <link rel="stylesheet" href="style.css">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lightbox CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
-<body class="text-gray-900">
+<body class="font-sans">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow z-50">
+  <!-- Header -->
+  <header class="bg-white bg-opacity-90 shadow fixed w-full top-0 z-10">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">Meuble Maison</h1>
-      <nav class="space-x-6 text-lg">
-        <a href="#showroom" class="hover:text-blue-600">Showroom</a>
-        <a href="mailto:info@yourstore.com" class="hover:text-blue-600">Contact</a>
+      <h1 class="text-2xl font-bold text-gray-800">Meuble Maison</h1>
+      <nav>
+        <a href="#showroom" class="px-4 text-gray-700 hover:text-black">Showroom</a>
+        <a href="tel:0658038620" class="px-4 text-gray-700 hover:text-black">Call Us</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="h-screen flex flex-col items-center justify-center text-center text-gray-800 px-6">
-    <h2 class="text-5xl font-extrabold mb-4 drop-shadow">Premium Marble Showroom</h2>
-    <p class="text-xl max-w-2xl mb-6 drop-shadow">Discover timeless beauty with our exclusive collection of marble slabs and finishes.</p>
-    <a href="#showroom" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">Explore Now</a>
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center text-white relative">
+    <div class="overlay"></div>
+    <h2 class="text-4xl md:text-6xl font-bold z-10">Elegant Marble Furniture</h2>
+    <p class="mt-4 text-lg md:text-xl z-10">Discover timeless designs for your home</p>
+    <a href="#showroom" class="mt-6 bg-white text-gray-800 font-semibold py-2 px-6 rounded shadow z-10 hover:bg-gray-200 transition">Explore Now</a>
   </section>
 
-  <!-- SHOWROOM GRID -->
-  <main id="showroom" class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
-    
-    <!-- Product Card 1 -->
-    <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
-      <a href="prod1.jpeg" data-lightbox="marble" data-title="Carrara White">
-        <img src="prod1.jpeg" alt="Marble 1" class="w-full">
-      </a>
-      <div class="p-4 text-center">
-        <h3 class="text-lg font-bold">Carrara White</h3>
-        <p class="text-sm text-gray-600 mb-3">Polished slab – 2cm thickness</p>
-        <a href="https://wa.me/213555000000" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Contact</a>
-      </div>
+  <!-- Showroom Section -->
+  <section id="showroom" class="max-w-6xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Collection</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <a href="prod1.jpeg" data-lightbox="showroom"><img src="prod1.jpeg" alt="Product 1" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod2.jpeg" data-lightbox="showroom"><img src="prod2.jpeg" alt="Product 2" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod3.jpg"  data-lightbox="showroom"><img src="prod3.jpg"  alt="Product 3" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod4.jpg"  data-lightbox="showroom"><img src="prod4.jpg"  alt="Product 4" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod5.jpg"  data-lightbox="showroom"><img src="prod5.jpg"  alt="Product 5" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod6.jpg"  data-lightbox="showroom"><img src="prod6.jpg"  alt="Product 6" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod7.jpg"  data-lightbox="showroom"><img src="prod7.jpg"  alt="Product 7" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod8.jpg"  data-lightbox="showroom"><img src="prod8.jpg"  alt="Product 8" class="rounded-lg shadow hover:shadow-lg transition"></a>
+      <a href="prod9.jpg"  data-lightbox="showroom"><img src="prod9.jpg"  alt="Product 9" class="rounded-lg shadow hover:shadow-lg transition"></a>
     </div>
+  </section>
 
-    <!-- Product Card 2 -->
-    <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
-      <a href="prod2.jpeg" data-lightbox="marble" data-title="Calacatta Gold">
-        <img src="prod2.jpeg" alt="Marble 2" class="w-full">
-      </a>
-      <div class="p-4 text-center">
-        <h3 class="text-lg font-bold">Calacatta Gold</h3>
-        <p class="text-sm text-gray-600 mb-3">Honed slab – 3cm thickness</p>
-        <a href="https://wa.me/213555000000" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Contact</a>
-      </div>
-    </div>
-
-    <!-- Product Card 3 -->
-    <div class="bg-white/90 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform">
-      <a href="prod3.jpg" data-lightbox="marble" data-title="Nero Marquina">
-        <img src="prod3.jpg" alt="Marble 3" class="w-full">
-      </a>
-      <div class="p-4 text-center">
-        <h3 class="text-lg font-bold">Nero Marquina</h3>
-        <p class="text-sm text-gray-600 mb-3">Polished slab – 2cm thickness</p>
-        <a href="https://wa.me/213555000000" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Contact</a>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-white/80 backdrop-blur shadow mt-12 p-6 text-center text-gray-700 relative z-10">
-    © 2025 Meuble Maison – All Rights Reserved
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 Meuble Maison — All Rights Reserved</p>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
