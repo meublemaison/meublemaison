@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meuble Maison Showroom</title>
-  <link href="style.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeubleMaison - أثاث رخامي فاخر</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
 
-  <!-- Header -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <h1 class="text-2xl font-bold text-gray-900">Meuble Maison</h1>
-      <nav class="space-x-6">
-        <a href="#showroom" class="hover:text-gray-600">Showroom</a>
-        <a href="tel:+213658038620" class="hover:text-gray-600">Call Us</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>أثاث رخامي فاخر</h1>
+            <p>اكتشف تصاميم خالدة لمنزلك</p>
+            <button onclick="exploreProducts()">استكشف الآن</button>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center text-center text-white">
-    <img src="background.jpg" class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" alt="Background">
-    <div class="bg-black bg-opacity-50 p-8 rounded-2xl">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Luxury Marble & Furniture</h2>
-      <p class="mb-6 text-lg">Discover premium designs for your home</p>
-      <a href="#showroom" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-xl font-semibold transition">Explore Now</a>
-    </div>
-  </section>
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>منتجاتنا</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="prod1.jpeg" alt="طاولة رخامية">
+                <h3>طاولة رخامية</h3>
+                <p>تصميم أنيق يناسب جميع المساحات</p>
+            </div>
+            <div class="product">
+                <img src="prod2.jpeg" alt="كرسي رخامي">
+                <h3>كرسي رخامي</h3>
+                <p>راحة وأناقة في آن واحد</p>
+            </div>
+            <div class="product">
+                <img src="prod3.jpg" alt="خزانة رخامية">
+                <h3>خزانة رخامية</h3>
+                <p>عملية وفاخرة بتصميم عصري</p>
+            </div>
+            <div class="product">
+                <img src="prod4.jpeg" alt="منضدة جانبية">
+                <h3>منضدة جانبية</h3>
+                <p>إضافة مثالية لغرفة المعيشة</p>
+            </div>
+            <div class="product">
+                <img src="prod5.jpeg" alt="حوض رخامي">
+                <h3>حوض رخامي</h3>
+                <p>لمسة فخامة للمطبخ أو الحمام</p>
+            </div>
+            <div class="product">
+                <img src="prod6.jpeg" alt="رف رخامي">
+                <h3>رف رخامي</h3>
+                <p>جمال وبساطة للتخزين الأنيق</p>
+            </div>
+            <div class="product">
+                <img src="prod7.jpeg" alt="لوح رخامي">
+                <h3>لوح رخامي</h3>
+                <p>متعدد الاستخدامات وفاخر</p>
+            </div>
+            <div class="product">
+                <img src="prod8.jpeg" alt="كرسي طاولة طعام">
+                <h3>كرسي طاولة طعام</h3>
+                <p>راحة مميزة بتصميم راقٍ</p>
+            </div>
+            <div class="product">
+                <img src="prod9.jpeg" alt="إكسسوارات رخامية">
+                <h3>إكسسوارات رخامية</h3>
+                <p>تفاصيل صغيرة بأثر كبير</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Showroom -->
-  <section id="showroom" class="max-w-6xl mx-auto py-16 px-4">
-    <h3 class="text-3xl font-bold text-center mb-12">Our Products</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>تواصل معنا</h2>
+        <p>رقم الهاتف: <a href="tel:0658038620">0658038620</a></p>
+    </section>
 
-      <!-- Product images -->
-      <a href="prod1.jpeg" data-lightbox="showroom"><img src="prod1.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod2.jpeg" data-lightbox="showroom"><img src="prod2.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod3.jpg" data-lightbox="showroom"><img src="prod3.jpg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod4.jpeg" data-lightbox="showroom"><img src="prod4.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod5.jpeg" data-lightbox="showroom"><img src="prod5.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod6.jpeg" data-lightbox="showroom"><img src="prod6.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod7.jpeg" data-lightbox="showroom"><img src="prod7.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod8.jpeg" data-lightbox="showroom"><img src="prod8.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-      <a href="prod9.jpeg" data-lightbox="showroom"><img src="prod9.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-center py-6">
-    <p>&copy; 2025 Meuble Maison. All Rights Reserved.</p>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
