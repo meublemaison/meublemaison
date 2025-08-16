@@ -4,56 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meuble Maison Showroom</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- TailwindCSS CDN -->
+  <link href="style.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lightbox CDN -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
-<body class="font-sans">
+<body class="bg-gray-100 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-white bg-opacity-90 shadow fixed w-full top-0 z-10">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-gray-800">Meuble Maison</h1>
-      <nav>
-        <a href="#showroom" class="px-4 text-gray-700 hover:text-black">Showroom</a>
-        <a href="tel:0658038620" class="px-4 text-gray-700 hover:text-black">Call Us</a>
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-gray-900">Meuble Maison</h1>
+      <nav class="space-x-6">
+        <a href="#showroom" class="hover:text-gray-600">Showroom</a>
+        <a href="tel:+213658038620" class="hover:text-gray-600">Call Us</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center text-white relative">
-    <div class="overlay"></div>
-    <h2 class="text-4xl md:text-6xl font-bold z-10">Elegant Marble Furniture</h2>
-    <p class="mt-4 text-lg md:text-xl z-10">Discover timeless designs for your home</p>
-    <a href="#showroom" class="mt-6 bg-white text-gray-800 font-semibold py-2 px-6 rounded shadow z-10 hover:bg-gray-200 transition">Explore Now</a>
+  <section class="relative h-screen flex items-center justify-center text-center text-white">
+    <img src="background.jpg" class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" alt="Background">
+    <div class="bg-black bg-opacity-50 p-8 rounded-2xl">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Luxury Marble & Furniture</h2>
+      <p class="mb-6 text-lg">Discover premium designs for your home</p>
+      <a href="#showroom" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-xl font-semibold transition">Explore Now</a>
+    </div>
   </section>
 
-  <!-- Showroom Section -->
+  <!-- Showroom -->
   <section id="showroom" class="max-w-6xl mx-auto py-16 px-4">
-    <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Collection</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <a href="prod1.jpeg" data-lightbox="showroom"><img src="prod1.jpeg" alt="Product 1" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod2.jpeg" data-lightbox="showroom"><img src="prod2.jpeg" alt="Product 2" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod3.jpg"  data-lightbox="showroom"><img src="prod3.jpg"  alt="Product 3" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod4.jpg"  data-lightbox="showroom"><img src="prod4.jpg"  alt="Product 4" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod5.jpg"  data-lightbox="showroom"><img src="prod5.jpg"  alt="Product 5" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod6.jpg"  data-lightbox="showroom"><img src="prod6.jpg"  alt="Product 6" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod7.jpg"  data-lightbox="showroom"><img src="prod7.jpg"  alt="Product 7" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod8.jpg"  data-lightbox="showroom"><img src="prod8.jpg"  alt="Product 8" class="rounded-lg shadow hover:shadow-lg transition"></a>
-      <a href="prod9.jpg"  data-lightbox="showroom"><img src="prod9.jpg"  alt="Product 9" class="rounded-lg shadow hover:shadow-lg transition"></a>
+    <h3 class="text-3xl font-bold text-center mb-12">Our Products</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Product images -->
+      <a href="prod1.jpeg" data-lightbox="showroom"><img src="prod1.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod2.jpeg" data-lightbox="showroom"><img src="prod2.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod3.jpg" data-lightbox="showroom"><img src="prod3.jpg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod4.jpeg" data-lightbox="showroom"><img src="prod4.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod5.jpeg" data-lightbox="showroom"><img src="prod5.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod6.jpeg" data-lightbox="showroom"><img src="prod6.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod7.jpeg" data-lightbox="showroom"><img src="prod7.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod8.jpeg" data-lightbox="showroom"><img src="prod8.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+      <a href="prod9.jpeg" data-lightbox="showroom"><img src="prod9.jpeg" class="rounded-xl shadow-md hover:scale-105 transition"></a>
+
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 text-center">
-    <p>&copy; 2025 Meuble Maison — All Rights Reserved</p>
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 Meuble Maison. All Rights Reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
