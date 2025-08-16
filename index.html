@@ -1,55 +1,149 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEUBLE MAISON</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEUBLE MAISON</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (for clean layout utilities) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <header>
-        <h1>MEUBLE MAISON</h1>
-        <nav>
-            <ul>
-                <li><a href="#products">منتجاتنا</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="text-gray-900">
 
-    <section class="hero">
-        <div class="hero-text">
-            <h2>أفضل أثاث لمنزلك</h2>
-            <p>جودة عالية - تصميم عصري - أسعار تنافسية</p>
-        </div>
-    </section>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur shadow z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <div class="text-2xl font-extrabold tracking-wide text-white">MEUBLE MAISON</div>
+      <nav class="space-x-6 rtl:space-x-reverse text-white">
+        <a href="#showroom" class="hover:underline">منتجاتنا</a>
+        <a href="#contact" class="hover:underline">اتصل بنا</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="products" class="products">
-        <h2>منتجاتنا</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="img1.jpg" alt="منتج 1">
-                <p>منتج 1 - خزانة حديثة</p>
-            </div>
-            <div class="product">
-                <img src="img2.jpg" alt="منتج 2">
-                <p>منتج 2 - مكتبة خشبية</p>
-            </div>
-            <div class="product">
-                <img src="img3.jpg" alt="منتج 3">
-                <p>منتج 3 - غرفة نوم كاملة</p>
-            </div>
-        </div>
-    </section>
+  <!-- Hero -->
+  <section class="hero flex items-center justify-center text-center px-6">
+    <div class="hero-card">
+      <h1 class="mb-3">أفضل أثاث لمنزلك</h1>
+      <p>جودة عالية – تصميم عصري – أسعار تنافسية</p>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-        <h2>اتصل بنا</h2>
-        <p>هاتف: 0555-555-555</p>
-        <p>العنوان: تلمسان - الجزائر</p>
-    </section>
+  <!-- Showroom -->
+  <main id="showroom" class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
+    <!-- Card 1 -->
+    <div class="card">
+      <a href="prod1.jpeg" data-lightbox="showroom" data-title="طاولة رخامية فاخرة">
+        <img src="prod1.jpeg" alt="طاولة رخامية فاخرة" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>طاولة رخامية فاخرة</h3>
+      </div>
+    </div>
 
-    <button id="whatsapp-btn">💬</button>
+    <!-- Card 2 -->
+    <div class="card">
+      <a href="prod2.jpeg" data-lightbox="showroom" data-title="رخام أبيض للمطابخ">
+        <img src="prod2.jpeg" alt="رخام أبيض للمطابخ" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>رخام أبيض للمطابخ</h3>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Card 3 (.jpg) -->
+    <div class="card">
+      <a href="prod3.jpg" data-lightbox="showroom" data-title="رخام أسود أنيق">
+        <img src="prod3.jpg" alt="رخام أسود أنيق" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>رخام أسود أنيق</h3>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <a href="prod4.jpeg" data-lightbox="showroom" data-title="رخام طبيعي للأرضيات">
+        <img src="prod4.jpeg" alt="رخام طبيعي للأرضيات" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>رخام طبيعي للأرضيات</h3>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <a href="prod5.jpeg" data-lightbox="showroom" data-title="رخام للمداخل الفاخرة">
+        <img src="prod5.jpeg" alt="رخام للمداخل الفاخرة" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>رخام للمداخل الفاخرة</h3>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <a href="prod6.jpeg" data-lightbox="showroom" data-title="رخام كلاسيكي للحمامات">
+        <img src="prod6.jpeg" alt="رخام كلاسيكي للحمامات" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>رخام كلاسيكي للحمامات</h3>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <a href="prod7.jpeg" data-lightbox="showroom" data-title="تصميم رخامي حديث">
+        <img src="prod7.jpeg" alt="تصميم رخامي حديث" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>تصميم رخامي حديث</h3>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <a href="prod8.jpeg" data-lightbox="showroom" data-title="رخام رمادي أنيق">
+        <img src="prod8.jpeg" alt="رخام رمادي أنيق" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>رخام رمادي أنيق</h3>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <a href="prod9.jpeg" data-lightbox="showroom" data-title="رخام فاخر متعدد الألوان">
+        <img src="prod9.jpeg" alt="رخام فاخر متعدد الألوان" class="w-full">
+      </a>
+      <div class="card-body">
+        <h3>رخام فاخر متعدد الألوان</h3>
+      </div>
+    </div>
+  </main>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-white/80 backdrop-blur shadow mt-12 p-6 text-center text-gray-800 relative z-10">
+    <h4 class="text-xl font-bold mb-2">اتصل بنا</h4>
+    <p>الهاتف: <a class="text-blue-700 underline" href="tel:0658038620">0658038620</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/70 backdrop-blur text-white py-6 text-center">
+    © 2025 MEUBLE MAISON — جميع الحقوق محفوظة
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
